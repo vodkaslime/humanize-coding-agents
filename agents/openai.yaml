@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanize Coding Agents"
+  short_description: "Make coding-agent prose sound like a competent teammate"
+  default_prompt: "Use $humanize-coding-agents to communicate like a direct, specific, evidence-aware engineering teammate."
