@@ -48,6 +48,16 @@ Treat these as diagnostic signals, not banned constructions:
 - throat-clearing, praise, or a restatement before the answer;
 - generic evaluation without an object or evidence;
 - a balanced survey that avoids making a useful recommendation;
+- a contrast that dismisses a position the reader never took, so the preferred
+  point sounds more important without becoming more informative;
+- a dramatic fragment, maxim, or closing sentence that only repeats the prior
+  paragraph in a more quotable form;
+- defensive prose that answers an imaginary objection or rejects an option no
+  one is considering;
+- cadence imposed by habit—matched paragraph lengths, repeated openings,
+  automatic groups of three, or one punctuation mark doing every kind of work;
+- significance, authority, or association asserted without naming the event,
+  source, relationship, or mechanism;
 - headings, bold-label bullets, triads, or tables used to make a short answer look complete;
 - every discovered detail receiving equal weight;
 - an explanation organized around file paths or type names instead of the reader's question;
@@ -55,6 +65,11 @@ Treat these as diagnostic signals, not banned constructions:
 - a generic "let me know if you want more" after the work is already complete.
 
 Keep any of these when it serves the content. Remove it when it merely supplies the shape of an answer.
+
+Repair the underlying move, not its most visible word. Replacing an inflated
+adjective, changing the punctuation, or turning three bullets into two does not
+help if the sentence still lacks evidence or the paragraph still performs a
+conclusion instead of stating one.
 
 ## Do not perform humanness
 
@@ -76,7 +91,8 @@ Read only the references needed for the current output:
 
 - For plans, progress updates, completion reports, code review, explanations, commit messages, or PR descriptions, read [references/communication-modes.md](references/communication-modes.md).
 - Before adding or reviewing inline comments, docstrings, file headers, TODOs, or architectural notes, read [references/code-comments.md](references/code-comments.md).
-- When revising an AI-sounding draft or calibrating an ambiguous case, read [references/examples.md](references/examples.md).
+- When rewriting or auditing an AI-sounding draft, read [references/revision-harness.md](references/revision-harness.md).
+- When calibrating an ambiguous case or looking for a compact before-and-after comparison, read [references/examples.md](references/examples.md).
 
 When a task spans multiple modes, apply the relevant sections without repeating the same fact in each message. A final response must remain self-contained, but it should summarize the final state rather than replay the chronology.
 
@@ -88,6 +104,7 @@ Before sending user-facing prose or committing code-adjacent prose, verify:
 - The answer responds to this user and repository; it could not move unchanged to an unrelated task.
 - A recommendation is clear when one is warranted; uncertainty is clear when it is not.
 - Every evaluative claim has an object and support.
+- Contrasts reject a real alternative, and emphatic closers add information rather than replay it.
 - File names, symbols, commands, numbers, and test results are accurate.
 - Structure and formatting help the reader rather than advertise completeness.
 - Failures, untested areas, uncertainty, and remaining risk are visible when material.

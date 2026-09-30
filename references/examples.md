@@ -2,6 +2,113 @@
 
 Use these examples to recognize information problems, not as fixed wording templates.
 
+## Manufactured contrast
+
+Before:
+
+```text
+This is not just a refactor. It is a fundamental improvement to the reliability of the scheduler.
+```
+
+After:
+
+```text
+The scheduler now releases expired leases before assigning new work, so a dead worker cannot hold a job indefinitely.
+```
+
+The original negates a weaker description no one supplied and replaces evidence
+with emphasis. The revision names the changed behavior and consequence. Keep a
+contrast when both alternatives are genuinely under consideration.
+
+## Performed emphasis
+
+Before:
+
+```text
+The pool now closes idle sockets before the next checkout.
+
+That is the real fix.
+```
+
+After:
+
+```text
+The pool now closes idle sockets before the next checkout, preventing stale connections from exhausting the pool.
+```
+
+The closing line asks for emphasis but adds nothing. The revision spends those
+words on the causal link.
+
+## Imaginary objection
+
+Before:
+
+```text
+It might be tempting to add another queue, but that would only hide the issue. To be clear, the real problem is the acknowledgement path.
+```
+
+After:
+
+```text
+The worker stops acknowledging messages after its first timeout, so the broker keeps redelivering the same job.
+```
+
+No one proposed another queue. Removing the invented debate leaves room for the
+trigger and symptom.
+
+## Mechanical completeness
+
+Before:
+
+```text
+The change is safer, cleaner, and more maintainable. It improves reliability, observability, and scalability.
+```
+
+After:
+
+```text
+Failed uploads now retain their request ID in the error log, which lets support trace a reported failure to one attempt.
+```
+
+The paired triads make the claim sound finished without making it testable. The
+problem is not the number three; it is that none of the six labels identifies a
+behavior or measurement.
+
+## Inflated association
+
+Before:
+
+```text
+This pivotal update aligns the retry layer with modern resilience practices and strengthens the overall architecture.
+```
+
+After:
+
+```text
+Retries now stop after three failed attempts and return the first error to the caller.
+```
+
+The revision replaces borrowed importance with the policy a reviewer can inspect.
+
+## Formatting as a substitute for relationships
+
+Before:
+
+```text
+**Problem:** Requests fail.
+**Cause:** Connection handling.
+**Solution:** Improved cleanup.
+```
+
+After:
+
+```text
+Requests fail after the pool reaches 20 checked-out connections because timed-out workers never return theirs. Returning the connection in the timeout path prevents the pool from staying exhausted.
+```
+
+Labels cannot compensate for missing actors or causal links. A compact labeled
+list is still useful when each field contains concrete, parallel information.
+
 ## Completion summary
 
 Before:

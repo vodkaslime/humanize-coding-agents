@@ -1,6 +1,8 @@
 # Humanize Coding Agents
 
-Make coding agents sound like competent teammates, not report generators.
+Make coding agents sound like competent human teammates.
+
+![A friendly coding agent in front of flowing code with the message “Here’s what matters — in plain language.”](assets/readme-hero.jpg)
 
 `humanize-coding-agents` is an Agent Skill for implementation updates, debugging, code review, code explanations, comments, commits, and PR descriptions. It removes generic, over-structured AI prose without hiding uncertainty or cutting technical detail.
 
@@ -8,22 +10,24 @@ Make coding agents sound like competent teammates, not report generators.
 
 Before:
 
-> I have completed a comprehensive analysis of the retry mechanism. The implementation is generally robust, but there are several areas that could potentially benefit from further improvement.
+> The configuration subsystem implements a sophisticated, multi-layered resolution paradigm in which input sources are dynamically reconciled through a precedence-aware normalization process, enabling context-sensitive values to propagate seamlessly across the application while preserving flexible override semantics.
 
 After:
 
-> Retries lose the original error in `worker.go:84`, so the final failure only reports `context deadline exceeded`. Preserve the first error and add a three-attempt regression test.
+> `resolveConfig()` reads the user settings first, then the repository settings, and finally the command-line flags. Each step overwrites matching values from the previous one, so `--timeout 30` takes priority over both configuration files.
 
-The second version makes a claim, points to the relevant code, explains the consequence, and stops.
+The second version states the precedence rule, follows the data through the code, and shows one concrete result.
 
 ## What it changes
 
 - Answers the question before explaining the process.
 - Replaces generic judgments with code, behavior, evidence, and consequences.
+- Rewrites empty contrasts, dramatic closers, and mechanical symmetry at the level of the underlying claim instead of swapping flagged words.
 - Makes a recommendation when the evidence supports one.
 - Separates verified facts, inference, assumptions, and unknowns.
 - Uses only as much structure as the answer needs.
 - Keeps material failures, risks, and untested areas visible.
+- Checks rewritten prose against the original facts, confidence, causality, scope, and exact technical literals.
 
 The skill does not manufacture a human voice with slang, fake anecdotes, deliberate roughness, or banned-word lists. Its working definition of natural prose is simpler: make a situated judgment for this reader and this repository.
 
@@ -68,3 +72,7 @@ The skill includes separate guidance for:
 - comments, docstrings, TODOs, and architectural notes.
 
 Detailed examples live in [`references/examples.md`](references/examples.md).
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).
