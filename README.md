@@ -1,5 +1,7 @@
 # Humanize Coding Agents
 
+[简体中文](README.zh-CN.md)
+
 Make coding agents sound like competent human teammates.
 
 ![A friendly coding agent in front of flowing code with the message “Here’s what matters — in plain language.”](assets/readme-hero.jpg)
